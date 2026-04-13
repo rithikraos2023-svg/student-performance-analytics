@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                // Use 'bat' for Windows environments
+                bat 'mvn clean package'
             }
         }
         stage('Test') {
@@ -13,3 +14,4 @@ pipeline {
         }
     }
 }
+
